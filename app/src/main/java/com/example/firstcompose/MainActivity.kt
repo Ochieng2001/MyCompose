@@ -73,7 +73,28 @@ class MainActivity : ComponentActivity() {
                item {
                    LazyRow(modifier = Modifier.fillMaxWidth()){
                        items(mountain){ mountain ->
-                           MountainCard(mountain)
+                           Card(modifier = Modifier
+                               .width(12.dp)
+                               .height(12.dp)
+                               .padding(23.dp)
+
+                           ) {
+                               Box(
+
+                                   modifier = Modifier.fillMaxWidth()
+                                   //.wrapContentHeight(align = Alignment.Bottom)
+                               ) {
+                                   Image(
+                                       painter = painterResource(id = mountain.Image),
+                                       contentDescription = null,
+                                       contentScale = ContentScale.Crop
+                                   )
+
+                                   Text(text = mountain.name)
+                                   Text(text = mountain.location)
+                               }
+
+                           }
                        }
 
                    }
@@ -131,28 +152,7 @@ class MainActivity : ComponentActivity() {
     
     @Composable
     fun MountainCard(mountain: Mountain) {
-        Card(modifier = Modifier
-            .width(12.dp)
-            .height(12.dp)
-            .padding(23.dp)
 
-        ) {
-            Box(
-
-                modifier = Modifier.fillMaxWidth()
-                    //.wrapContentHeight(align = Alignment.Bottom)
-            ) {
-                Image(
-                    painter = painterResource(id = mountain.Image),
-                    contentDescription = null,
-                    contentScale = ContentScale.Crop
-                )
-
-                Text(text = mountain.name)
-                Text(text = mountain.location)
-            }
-
-        }
     }
 
 }
