@@ -160,7 +160,7 @@ private fun MountainViewBox(mountain: Mountain) {
     {
 
         Image(
-            painter = painterResource(id = mountain.BoxImage),
+            painter = painterResource(id = mountain.Image),
             modifier = Modifier
                 .width(250.dp)
                 .height(150.dp)
@@ -254,7 +254,7 @@ fun MountainCell(mountain: Mountain) {
             .background(Color.White)
     ) {
         Image(
-            painter = painterResource(id = mountain.BoxImage),
+            painter = painterResource(id = mountain.Image),
             modifier = Modifier
                 .clip(shape = RoundedCornerShape(12.dp))
                 .width(250.dp)
@@ -337,7 +337,7 @@ fun MountainCell(mountain: Mountain) {
 
 
 data class Mountain(
-    val BoxImage: Int,
+    val Image: Int,
     val ratingIcon: Int,
     val name: String,
     val city: String,
@@ -350,7 +350,7 @@ data class Mountain(
 val mountain = listOf(
     Mountain(
 
-        BoxImage = R.drawable.download5,
+        Image = R.drawable.download5,
         ratingIcon = R.drawable.rating,
         rating = "4.9",
         name = " Souther Mountain",
@@ -361,7 +361,7 @@ val mountain = listOf(
     ),
     Mountain(
 
-        BoxImage = R.drawable.mountain1,
+        Image = R.drawable.mountain1,
         ratingIcon = R.drawable.rating,
         rating = "5.0",
         name = " Longonot Mountain",
@@ -372,7 +372,7 @@ val mountain = listOf(
     ),
     Mountain(
 
-        BoxImage = R.drawable.mountains2,
+        Image = R.drawable.mountains2,
         ratingIcon = R.drawable.rating,
         rating = "4.0",
         name = "Nandi Hills",
@@ -383,7 +383,7 @@ val mountain = listOf(
     ),
     Mountain(
 
-        BoxImage = R.drawable.mountain3,
+        Image = R.drawable.mountain3,
         ratingIcon = R.drawable.rating,
         rating = "3.5",
         name = " Mt.Kenya Mountain",
@@ -393,7 +393,7 @@ val mountain = listOf(
     ),
     Mountain(
 
-        BoxImage = R.drawable.mountain4,
+        Image = R.drawable.mountain4,
         ratingIcon = R.drawable.rating,
         rating = "3.5",
         name = " Evarest Mountain",
@@ -403,7 +403,7 @@ val mountain = listOf(
     ),
     Mountain(
 
-        BoxImage = R.drawable.orderimag,
+        Image = R.drawable.orderimag,
         ratingIcon = R.drawable.rating,
         rating = "3.5",
         name = " Kilimanjaro Mountain",
@@ -413,7 +413,7 @@ val mountain = listOf(
     ),
     Mountain(
 
-        BoxImage = R.drawable.images,
+        Image = R.drawable.images,
         ratingIcon = R.drawable.rating,
         rating = "3.5",
         name = " Beldon Mountain",
@@ -423,7 +423,7 @@ val mountain = listOf(
     ),
     Mountain(
 
-        BoxImage = R.drawable.icon1,
+        Image = R.drawable.icon1,
         ratingIcon = R.drawable.rating,
         rating = "3.5",
         name = " Tororo Mountain",
@@ -433,7 +433,7 @@ val mountain = listOf(
     ),
     Mountain(
 
-        BoxImage = R.drawable.download5,
+        Image = R.drawable.download5,
         ratingIcon = R.drawable.rating,
         rating = "3.5",
         name = " Easter Mountain",
